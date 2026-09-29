@@ -7,9 +7,17 @@
     <link rel="stylesheet" href="/resources/style.css">
 </head>
 <body>
+    <div id="header-placeholder"></div>
     <h1>BlocksC download</h1>
     <p>It was hard to maintain the web version so, ill just put a download here, sorry.</p>
     <p></p>
     <a href=bin.zip class="download-btn" download>Download</a>
+    <script>
+        fetch('resources/header.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('header-placeholder').innerHTML = data;
+        });
+    </script>
 </body>
 </html>
