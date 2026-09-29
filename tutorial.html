@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlocksC Tutorial</title>
+      <meta property="og:title" content="BlocksC tutorial">
+      <meta property="og:description" content="Tutorial how to use blocksc">
+      <meta property="og:type" content="website">
+    <link rel="stylesheet" href="resources/styles.css">
+</head>
+<body>
+    <div id="header-placeholder"></div>
+    <h1>Keybinds</h1>
+    <ul>
+      <li>
+        1,2,3 | Tools
+      </li>
+      <li>
+        Del | delete
+      </li>
+      <li>
+        Ctrl+d | Will move ur camera, but it clones part
+      </li>
+      <li>
+        esc | close
+      </li>
+    </ul>
+    <h1>Saving and loading</h1>
+    <p>saving and loading is done via file > save/load, It uses a JSON format that i wont explain here</p>
+    <script>
+        fetch('resources/header.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('header-placeholder').innerHTML = data;
+        });
+    </script>
+</body>
+</html>
