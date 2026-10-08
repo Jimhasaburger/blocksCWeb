@@ -15,8 +15,17 @@
     <h1>BlocksC download</h1>
     <p>It was hard to maintain the web version so, ill just put a download here, sorry.</p>
     <p></p>
-    <a href=bin.zip class="download-btn" download>Download</a>
-    <p>Latest update: v3, Update checker, fixed transparency, some other stuff but i forgot</p>
+    <div class="download-area">
+    <select id="os-select" class="os-select">
+        <option value="windows">Windows</option>
+        <option value="linux">Linux</option>
+    </select>
+
+    <a id="download-btn" href="versions/windows.zip" class="download-btn" download>
+        Download
+    </a>
+</div>
+    <p>Latest update: v4, linux and sound support, maybe fixed a few bugs, also icons. decreased size by a bit</p>
     </div>
     <script>
         fetch('resources/header.html')
@@ -24,6 +33,28 @@
         .then(data => {
             document.getElementById('header-placeholder').innerHTML = data;
         });
+
+        const osSelect = document.getElementById("os-select");
+        const downloadBtn = document.getElementById("download-btn");
+
+        function updateDownload() {
+            const os = osSelect.value;
+            downloadBtn.href = `versions/${os}.zip`;
+        }
+
+        // Automatically select the user's OS
+        const platform = navigator.platform.toLowerCase();
+
+        if (platform.includes("win")) {
+            osSelect.value = "windows";
+        } else if (platform.includes("linux")) {
+            osSelect.value = "linux";
+        }
+
+        updateDownload();
+
+        // Change download when the dropdown changes
+        osSelect.addEventListener("change", updateDownload);
     </script>
 </body>
 </html>

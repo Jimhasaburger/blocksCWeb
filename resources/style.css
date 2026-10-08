@@ -1,4 +1,5 @@
 /* Global Styles */
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -21,16 +22,20 @@ p {
 }
 
 /* Global Link Behavior */
-a:link, a:visited {
+
+a:link,
+a:visited {
     text-decoration: none;
     color: DeepSkyBlue;
 }
 
-a:hover, a:active {
+a:hover,
+a:active {
     text-decoration: underline;
 }
 
 /* Components: Name List & Avatars */
+
 .name-list p {
     display: flex;
     align-items: center;
@@ -43,7 +48,7 @@ a:hover, a:active {
 }
 
 .handle {
-    color: #888; 
+    color: #888;
 }
 
 .avatar {
@@ -54,6 +59,7 @@ a:hover, a:active {
 }
 
 /* Components: Buttons */
+
 .btn {
     background: DeepSkyBlue;
     color: white;
@@ -66,6 +72,7 @@ a:hover, a:active {
 }
 
 /* Layout: Editor, Preview, & Output */
+
 .editor-row {
     display: flex;
     gap: 20px;
@@ -78,7 +85,9 @@ a:hover, a:active {
     flex-direction: column;
 }
 
-#editor, #preview, #output {
+#editor,
+#preview,
+#output {
     background-color: #1a1a1a !important;
     color: #ffffff !important;
     border: 1px solid #333 !important;
@@ -95,6 +104,7 @@ a:hover, a:active {
 }
 
 /* Custom Color Picker UI */
+
 .custom-picker-container {
     display: inline-flex;
     vertical-align: middle;
@@ -129,19 +139,67 @@ a:hover, a:active {
 }
 
 .dropdown-arrow {
-    width: 0; 
-    height: 0; 
+    width: 0;
+    height: 0;
     border-left: 5px solid transparent;
     border-right: 5px solid transparent;
     border-top: 5px solid white;
 }
+
+/* Download Area */
+
+.download-area {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 15px;
+}
+
+/* Download Button */
+
 .download-btn {
-            display: inline-block;
-            background-color: #00FF00;
-            color: white;
-            padding: 12px 24px;
-            font-size: 16px;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background-color 0.2s;
+    display: inline-block;
+    background-color: DeepSkyBlue;
+    color: #ffffff !important;
+    padding: 12px 24px;
+    font-size: 16px;
+    text-decoration: none !important;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.download-btn:hover {
+    background-color: #009acd;
+    text-decoration: none !important;
+}
+
+.download-btn:active {
+    background-color: #0086b3;
+}
+
+/* OS Dropdown */
+
+.os-select {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    border: 1px solid #333;
+    border-radius: 5px;
+    padding: 12px 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.os-select:hover {
+    border-color: DeepSkyBlue;
+}
+
+.os-select:focus {
+    outline: none;
+    border-color: DeepSkyBlue;
+}
+
+.os-select option {
+    background-color: #1a1a1a;
+    color: #ffffff;
 }
